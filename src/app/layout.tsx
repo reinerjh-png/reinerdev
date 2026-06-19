@@ -3,6 +3,8 @@ import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import BackToTop from "@/components/ui/BackToTop";
+import ScrollObserver from "@/components/ui/ScrollObserver";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -26,11 +28,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="scroll-smooth">
-      <body className={`${inter.variable} ${outfit.variable} antialiased`}>
+      <body
+        className={`${inter.variable} ${outfit.variable} antialiased`}
+        style={{
+          '--font-primary': `var(${inter.variable}), 'Inter', sans-serif`,
+          '--font-display': `var(${outfit.variable}), 'Outfit', sans-serif`,
+        } as React.CSSProperties}
+      >
         <Navbar />
         <main>{children}</main>
         <Footer />
-        <button className="fixed bottom-8 right-8 w-12 h-12 bg-white/10 border border-white/20 rounded-full flex items-center justify-center text-white text-xl z-50 backdrop-blur opacity-0 pointer-events-none transition-all hover:bg-white/20 hover:-translate-y-1" id="back-to-top" aria-label="Volver arriba">↑</button>
+        <BackToTop />
+        <ScrollObserver />
       </body>
     </html>
   );

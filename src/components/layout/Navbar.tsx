@@ -18,49 +18,53 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#050810]/90 backdrop-blur-xl border-b border-blue-500/15 py-3' : 'py-4'}`}>
-        <div className="container mx-auto px-6 max-w-7xl">
-          <div className="flex items-center justify-between gap-8">
-            <Link href="/" className="flex items-center gap-2.5 shrink-0">
-              <Image src="/assets/logo-reinerdev.webp" alt="ReinerDev" width={42} height={42} className="object-contain" />
-              <span className="font-display text-xl font-extrabold tracking-tight">Reiner<span className="text-blue-400">Dev</span></span>
+      <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`} id="navbar" role="navigation" aria-label="Menú principal">
+        <div className="container">
+          <div className="navbar-inner">
+            <Link href="/" className="navbar-logo" aria-label="ReinerDev - Inicio">
+              <Image src="/assets/logo-reinerdev.webp" alt="ReinerDev logo" width={42} height={42} />
+              <span className="navbar-logo-text">Reiner<span>Dev</span></span>
             </Link>
-            
-            <ul className="hidden md:flex items-center gap-1">
-              <li><Link href="/" className="px-3.5 py-2 text-sm font-medium text-slate-400 hover:text-white hover:bg-white/5 rounded-md transition-all">Inicio</Link></li>
-              <li><Link href="/#soluciones" className="px-3.5 py-2 text-sm font-medium text-slate-400 hover:text-white hover:bg-white/5 rounded-md transition-all">Soluciones</Link></li>
-              <li><Link href="/#productos" className="px-3.5 py-2 text-sm font-medium text-slate-400 hover:text-white hover:bg-white/5 rounded-md transition-all">Productos</Link></li>
-              <li><Link href="/#desarrollo" className="px-3.5 py-2 text-sm font-medium text-slate-400 hover:text-white hover:bg-white/5 rounded-md transition-all">Desarrollo personalizado</Link></li>
-              <li><Link href="/#nosotros" className="px-3.5 py-2 text-sm font-medium text-slate-400 hover:text-white hover:bg-white/5 rounded-md transition-all">Nosotros</Link></li>
-              <li><Link href="/#contacto" className="px-3.5 py-2 text-sm font-medium text-slate-400 hover:text-white hover:bg-white/5 rounded-md transition-all">Contacto</Link></li>
+
+            <ul className={`navbar-nav hidden lg:flex`} role="menubar">
+              <li role="none"><Link href="/" role="menuitem" className="active">Inicio</Link></li>
+              <li role="none"><Link href="/#soluciones" role="menuitem">Soluciones</Link></li>
+              <li role="none"><Link href="/#productos" role="menuitem">Productos</Link></li>
+              <li role="none"><Link href="/#desarrollo" role="menuitem">Desarrollo personalizado</Link></li>
+              <li role="none"><Link href="/#nosotros" role="menuitem">Nosotros</Link></li>
+              <li role="none"><Link href="/#contacto" role="menuitem">Contacto</Link></li>
             </ul>
 
-            <div className="hidden md:flex items-center gap-3">
-              <Link href="/#cotizacion" className="btn btn-secondary text-sm px-5 py-2.5">Cotizar</Link>
-              <button className="btn btn-primary text-sm px-5 py-2.5">Solicitar demo</button>
+            <div className="navbar-actions hidden lg:flex">
+              <Link href="/#desarrollo" className="btn btn-secondary btn-sm" id="nav-btn-quote">Cotizar</Link>
+              <button className="btn btn-primary btn-sm" id="nav-btn-demo">Solicitar demo</button>
             </div>
 
             <button 
-              className="md:hidden flex flex-col gap-1.5 p-2 rounded-md hover:bg-white/5 transition-all"
+              className="navbar-toggle lg:hidden flex" 
+              id="menu-toggle" 
+              aria-label="Abrir menú móvil" 
+              aria-expanded={isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Menú"
             >
-              <span className="block w-5.5 h-0.5 bg-white rounded-sm transition-all"></span>
-              <span className="block w-5.5 h-0.5 bg-white rounded-sm transition-all"></span>
-              <span className="block w-5.5 h-0.5 bg-white rounded-sm transition-all"></span>
+              <span></span><span></span><span></span>
             </button>
           </div>
         </div>
       </nav>
 
       {/* Mobile Menu */}
-      <div className={`fixed top-[70px] left-0 right-0 bg-[#050810]/98 backdrop-blur-xl border-b border-blue-500/15 p-6 z-40 flex flex-col gap-2 transition-transform duration-300 ${isMobileMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-[150%] opacity-0'}`}>
+      <div className={`fixed top-[72px] left-0 right-0 bg-[#050810]/98 backdrop-blur-xl border-b border-blue-500/15 p-6 z-40 flex flex-col gap-2 transition-transform duration-300 ${isMobileMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-[150%] opacity-0'} lg:hidden`}>
         <Link href="/" className="px-4 py-3 text-[15px] font-medium text-slate-400 hover:text-white hover:bg-white/5 hover:border-blue-500/15 border border-transparent rounded-lg transition-all" onClick={() => setIsMobileMenuOpen(false)}>Inicio</Link>
         <Link href="/#soluciones" className="px-4 py-3 text-[15px] font-medium text-slate-400 hover:text-white hover:bg-white/5 hover:border-blue-500/15 border border-transparent rounded-lg transition-all" onClick={() => setIsMobileMenuOpen(false)}>Soluciones</Link>
         <Link href="/#productos" className="px-4 py-3 text-[15px] font-medium text-slate-400 hover:text-white hover:bg-white/5 hover:border-blue-500/15 border border-transparent rounded-lg transition-all" onClick={() => setIsMobileMenuOpen(false)}>Productos</Link>
-        <Link href="/#desarrollo" className="px-4 py-3 text-[15px] font-medium text-slate-400 hover:text-white hover:bg-white/5 hover:border-blue-500/15 border border-transparent rounded-lg transition-all" onClick={() => setIsMobileMenuOpen(false)}>Desarrollo</Link>
+        <Link href="/#desarrollo" className="px-4 py-3 text-[15px] font-medium text-slate-400 hover:text-white hover:bg-white/5 hover:border-blue-500/15 border border-transparent rounded-lg transition-all" onClick={() => setIsMobileMenuOpen(false)}>Desarrollo personalizado</Link>
+        <Link href="/#nosotros" className="px-4 py-3 text-[15px] font-medium text-slate-400 hover:text-white hover:bg-white/5 hover:border-blue-500/15 border border-transparent rounded-lg transition-all" onClick={() => setIsMobileMenuOpen(false)}>Nosotros</Link>
         <Link href="/#contacto" className="px-4 py-3 text-[15px] font-medium text-slate-400 hover:text-white hover:bg-white/5 hover:border-blue-500/15 border border-transparent rounded-lg transition-all" onClick={() => setIsMobileMenuOpen(false)}>Contacto</Link>
-        <button className="btn btn-primary justify-center w-full mt-2" onClick={() => setIsMobileMenuOpen(false)}>Solicitar demo</button>
+        <div className="flex flex-col gap-3 mt-4">
+          <Link href="/#desarrollo" className="btn btn-secondary w-full justify-center" onClick={() => setIsMobileMenuOpen(false)}>Cotizar</Link>
+          <button className="btn btn-primary w-full justify-center" onClick={() => setIsMobileMenuOpen(false)}>Solicitar demo</button>
+        </div>
       </div>
     </>
   );
