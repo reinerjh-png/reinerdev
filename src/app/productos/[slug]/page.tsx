@@ -31,11 +31,10 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   }
 
   // Parse color properties
-  const rgbaRegex = /rgba\(\s*\d+\s*,\s*\d+\s*,\s*\d+\s*,\s*([\d.]+)\s*\)/;
   
   return (
     <>
-      <section className="product-page-hero relative overflow-hidden flex items-center min-h-[80vh] pt-[130px] pb-[80px]" id="inicio">
+      <section className="product-page-hero relative overflow-hidden pt-[140px] pb-[80px] lg:min-h-[80vh] lg:flex lg:items-center lg:pt-[120px]" id="inicio">
         <div className="hero-grid absolute inset-0"></div>
         <div 
           className="hero-orb hero-orb-1" 

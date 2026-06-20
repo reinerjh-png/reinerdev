@@ -14,7 +14,7 @@ function useAnimatedCounter(target: number, duration: number = 2000) {
       (entries) => {
         if (entries[0].isIntersecting && !hasAnimated) {
           setHasAnimated(true);
-          let start = 0;
+          const start = 0;
           const end = target;
           const startTime = performance.now();
 
