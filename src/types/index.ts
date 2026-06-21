@@ -1,12 +1,17 @@
 export interface ProductFeature {
   id: string;
   name: string;
+  description: string;
 }
 
 export interface MockupConfig {
   bgColor: string;
   dotColors: string[];
   url: string;
+  metric1Label: string;
+  metric1Value: string;
+  metric2Label: string;
+  metric2Value: string;
   rows: Array<{
     id: string;
     avatarColor: string;

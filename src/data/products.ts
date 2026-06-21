@@ -8,25 +8,29 @@ export const products: Product[] = [
     category: 'Salud & Clínicas',
     description: 'Gestión completa para clínicas dentales. Agendas, historias clínicas, presupuestos y control de pagos en un solo lugar.',
     features: [
-      { id: 'f1', name: 'Gestión de pacientes' },
-      { id: 'f2', name: 'Agenda de citas' },
-      { id: 'f3', name: 'Historial clínico' },
-      { id: 'f4', name: 'Usuarios y permisos' },
+      { id: 'f1', name: 'Gestión de pacientes',  description: 'Historial completo de cada paciente, siempre accesible.' },
+      { id: 'f2', name: 'Agenda de citas',        description: 'Reservas online y recordatorios automáticos.' },
+      { id: 'f3', name: 'Historial clínico',      description: 'Registro digital de tratamientos y evolución.' },
+      { id: 'f4', name: 'Usuarios y permisos',    description: 'Controla qué puede ver y hacer cada miembro del equipo.' },
     ],
     icon: '🦷',
     iconBg: 'rgba(37, 99, 235, 0.1)',
     iconBorder: 'rgba(37, 99, 235, 0.25)',
     themeColor: '#2563eb',
     mockupConfig: {
-      bgColor: '#1e3a8a', // Dark blue
+      bgColor: '#1e3a8a',
       dotColors: ['#ef4444', '#fbbf24', '#22c55e'],
       url: 'dental.reinerdev.com',
+      metric1Label: 'Pacientes atendidos',
+      metric1Value: '142',
+      metric2Label: 'Satisfacción',
+      metric2Value: '98%',
       rows: [
         { id: 'r1', avatarColor: 'linear-gradient(135deg, #60a5fa, #3b82f6)', statusText: 'Confirmada', statusBg: 'rgba(34,197,94,0.15)', statusColor: '#4ade80' },
-        { id: 'r2', avatarColor: 'linear-gradient(135deg, #f472b6, #ec4899)', statusText: 'En sala', statusBg: 'rgba(59,130,246,0.15)', statusColor: '#60a5fa' },
-        { id: 'r3', avatarColor: 'linear-gradient(135deg, #34d399, #10b981)', statusText: 'Pendiente', statusBg: 'rgba(251,191,36,0.15)', statusColor: '#fbbf24' }
-      ]
-    }
+        { id: 'r2', avatarColor: 'linear-gradient(135deg, #f472b6, #ec4899)', statusText: 'En sala',    statusBg: 'rgba(59,130,246,0.15)', statusColor: '#60a5fa' },
+        { id: 'r3', avatarColor: 'linear-gradient(135deg, #34d399, #10b981)', statusText: 'Pendiente',  statusBg: 'rgba(251,191,36,0.15)', statusColor: '#fbbf24' },
+      ],
+    },
   },
   {
     id: 'restaurant',
@@ -35,25 +39,29 @@ export const products: Product[] = [
     category: 'Gastronomía',
     description: 'Controla mesas, pedidos, inventario y facturación. Cocina y sala siempre sincronizadas.',
     features: [
-      { id: 'f1', name: 'Gestión de pedidos' },
-      { id: 'f2', name: 'Control de mesas' },
-      { id: 'f3', name: 'Módulo cocina' },
-      { id: 'f4', name: 'Reportes de ventas' },
+      { id: 'f1', name: 'Gestión de pedidos',  description: 'Toma y sigue cada pedido desde la mesa hasta cocina.' },
+      { id: 'f2', name: 'Control de mesas',    description: 'Vista en tiempo real del estado de cada mesa del local.' },
+      { id: 'f3', name: 'Módulo cocina',       description: 'Tickets digitales en pantalla para agilizar la preparación.' },
+      { id: 'f4', name: 'Reportes de ventas',  description: 'Analiza ventas por turno, producto y mesero fácilmente.' },
     ],
     icon: '🍽️',
     iconBg: 'rgba(249, 115, 22, 0.1)',
     iconBorder: 'rgba(249, 115, 22, 0.25)',
     themeColor: '#f97316',
     mockupConfig: {
-      bgColor: '#7c2d12', // Dark orange
+      bgColor: '#7c2d12',
       dotColors: ['#ef4444', '#fbbf24', '#22c55e'],
       url: 'resto.reinerdev.com/mesas',
+      metric1Label: 'Pedidos hoy',
+      metric1Value: '87',
+      metric2Label: 'Mesas ocupadas',
+      metric2Value: '12/15',
       rows: [
-        { id: 'r1', avatarColor: '#22c55e', statusText: 'Servido', statusBg: '', statusColor: '' },
-        { id: 'r2', avatarColor: '#f97316', statusText: 'Preparando', statusBg: '', statusColor: '' },
-        { id: 'r3', avatarColor: '#3b82f6', statusText: 'Libre', statusBg: '', statusColor: '' }
-      ]
-    }
+        { id: 'r1', avatarColor: '#22c55e', statusText: 'Servido',    statusBg: 'rgba(34,197,94,0.15)',  statusColor: '#4ade80' },
+        { id: 'r2', avatarColor: '#f97316', statusText: 'Preparando', statusBg: 'rgba(249,115,22,0.15)', statusColor: '#fb923c' },
+        { id: 'r3', avatarColor: '#3b82f6', statusText: 'Libre',      statusBg: 'rgba(59,130,246,0.15)', statusColor: '#60a5fa' },
+      ],
+    },
   },
   {
     id: 'gym',
@@ -62,25 +70,29 @@ export const products: Product[] = [
     category: 'Sector Fitness',
     description: 'Administra clientes, membresías, planes y pagos de forma eficiente. Control total de asistencia en tiempo real.',
     features: [
-      { id: 'f1', name: 'Membresías' },
-      { id: 'f2', name: 'Control de acceso' },
-      { id: 'f3', name: 'Planes recurrentes' },
-      { id: 'f4', name: 'App para clientes' },
+      { id: 'f1', name: 'Membresías',         description: 'Gestiona planes, renovaciones y fechas de vencimiento.' },
+      { id: 'f2', name: 'Control de acceso',  description: 'Registra entradas y salidas con código QR o huella.' },
+      { id: 'f3', name: 'Planes recurrentes', description: 'Cobros automáticos y alertas de pagos pendientes.' },
+      { id: 'f4', name: 'App para clientes',  description: 'Tus socios ven su plan, asistencia y pagos desde el móvil.' },
     ],
     icon: '💪',
     iconBg: 'rgba(34, 197, 94, 0.1)',
     iconBorder: 'rgba(34, 197, 94, 0.25)',
     themeColor: '#22c55e',
     mockupConfig: {
-      bgColor: '#14532d', // Dark green
+      bgColor: '#14532d',
       dotColors: ['#ef4444', '#fbbf24', '#22c55e'],
       url: 'gym.reinerdev.com/miembros',
+      metric1Label: 'Miembros activos',
+      metric1Value: '318',
+      metric2Label: 'Retención',
+      metric2Value: '94%',
       rows: [
-        { id: 'r1', avatarColor: '#4ade80', statusText: 'Premium', statusBg: 'rgba(34,197,94,0.15)', statusColor: '#4ade80' },
-        { id: 'r2', avatarColor: '#84cc16', statusText: 'Básico', statusBg: 'rgba(251,191,36,0.15)', statusColor: '#fbbf24' },
-        { id: 'r3', avatarColor: '#06b6d4', statusText: 'Activo', statusBg: 'rgba(34,197,94,0.15)', statusColor: '#4ade80' }
-      ]
-    }
+        { id: 'r1', avatarColor: '#4ade80', statusText: 'Premium', statusBg: 'rgba(34,197,94,0.15)',  statusColor: '#4ade80' },
+        { id: 'r2', avatarColor: '#84cc16', statusText: 'Básico',  statusBg: 'rgba(251,191,36,0.15)', statusColor: '#fbbf24' },
+        { id: 'r3', avatarColor: '#06b6d4', statusText: 'Activo',  statusBg: 'rgba(34,197,94,0.15)',  statusColor: '#4ade80' },
+      ],
+    },
   },
   {
     id: 'pharmacy',
@@ -89,24 +101,28 @@ export const products: Product[] = [
     category: 'Farmacia & Retail',
     description: 'Optimiza inventario, ventas y gestión de productos. Alertas de stock, reportes de ventas y control total de tu farmacia.',
     features: [
-      { id: 'f1', name: 'Inventario en vivo' },
-      { id: 'f2', name: 'Alertas de stock' },
-      { id: 'f3', name: 'Punto de venta' },
-      { id: 'f4', name: 'Lotes y vencimientos' },
+      { id: 'f1', name: 'Inventario en vivo',  description: 'Stock actualizado al instante tras cada venta o entrada.' },
+      { id: 'f2', name: 'Alertas de stock',    description: 'Notificaciones automáticas cuando un producto baja de mínimo.' },
+      { id: 'f3', name: 'Punto de venta',      description: 'Cobros rápidos con historial de transacciones por cajero.' },
+      { id: 'f4', name: 'Lotes y vencimientos',description: 'Controla fechas de caducidad y evita pérdidas por vencimiento.' },
     ],
     icon: '💊',
     iconBg: 'rgba(168, 85, 247, 0.1)',
     iconBorder: 'rgba(168, 85, 247, 0.25)',
     themeColor: '#a855f7',
     mockupConfig: {
-      bgColor: '#4c1d95', // Dark purple
+      bgColor: '#4c1d95',
       dotColors: ['#ef4444', '#fbbf24', '#22c55e'],
       url: 'pharmacy.reinerdev.com/inventario',
+      metric1Label: 'Productos en stock',
+      metric1Value: '1,248',
+      metric2Label: 'Ventas del día',
+      metric2Value: 'S/ 3,840',
       rows: [
-        { id: 'r1', avatarColor: '#a855f7', statusText: 'Stock: 248', statusBg: 'rgba(34,197,94,0.15)', statusColor: '#4ade80' },
-        { id: 'r2', avatarColor: '#ec4899', statusText: 'Stock bajo', statusBg: 'rgba(239,68,68,0.15)', statusColor: '#f87171' },
-        { id: 'r3', avatarColor: '#8b5cf6', statusText: 'Disponible', statusBg: 'rgba(34,197,94,0.15)', statusColor: '#4ade80' }
-      ]
-    }
-  }
+        { id: 'r1', avatarColor: '#a855f7', statusText: 'Stock: 248', statusBg: 'rgba(34,197,94,0.15)',  statusColor: '#4ade80' },
+        { id: 'r2', avatarColor: '#ec4899', statusText: 'Stock bajo', statusBg: 'rgba(239,68,68,0.15)',  statusColor: '#f87171' },
+        { id: 'r3', avatarColor: '#8b5cf6', statusText: 'Disponible', statusBg: 'rgba(34,197,94,0.15)',  statusColor: '#4ade80' },
+      ],
+    },
+  },
 ];

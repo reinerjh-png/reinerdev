@@ -6,7 +6,7 @@ export default function WhatsAppFloat() {
       href="https://wa.me/51977480721?text=Hola%20ReinerDev%2C%20me%20gustar%C3%ADa%20cotizar%20un%20proyecto" 
       target="_blank" 
       rel="noopener noreferrer"
-      className="fixed bottom-6 left-6 z-[2000] w-[60px] h-[60px] bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-[0_8px_32px_rgba(37,211,102,0.4)] hover:-translate-y-1 hover:scale-105 transition-all duration-300 group"
+      className="fixed bottom-6 left-6 z-[900] w-[60px] h-[60px] bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-[0_8px_32px_rgba(37,211,102,0.4)] hover:-translate-y-1 hover:scale-105 transition-all duration-300 group"
       aria-label="Contactar por WhatsApp"
     >
       <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor" viewBox="0 0 16 16">
