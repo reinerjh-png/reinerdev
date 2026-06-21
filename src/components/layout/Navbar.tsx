@@ -37,7 +37,7 @@ export default function Navbar() {
 
             <div className="navbar-actions hidden lg:flex">
               <Link href="/#desarrollo" className="btn btn-secondary btn-sm" id="nav-btn-quote">Cotizar</Link>
-              <button className="btn btn-primary btn-sm" id="nav-btn-demo">Solicitar demo</button>
+              <Link href="?modal=demo" scroll={false} className="btn btn-primary btn-sm" id="nav-btn-demo">Solicitar demo</Link>
             </div>
 
             <button 
@@ -63,7 +63,7 @@ export default function Navbar() {
         <Link href="/#contacto" className="px-4 py-3 text-[15px] font-medium text-slate-400 hover:text-white hover:bg-white/5 hover:border-blue-500/15 border border-transparent rounded-lg transition-all" onClick={() => setIsMobileMenuOpen(false)}>Contacto</Link>
         <div className="flex flex-col gap-3 mt-4">
           <Link href="/#desarrollo" className="btn btn-secondary w-full justify-center" onClick={() => setIsMobileMenuOpen(false)}>Cotizar</Link>
-          <button className="btn btn-primary w-full justify-center" onClick={() => setIsMobileMenuOpen(false)}>Solicitar demo</button>
+          <Link href="?modal=demo" scroll={false} className="btn btn-primary w-full justify-center" onClick={() => setIsMobileMenuOpen(false)}>Solicitar demo</Link>
         </div>
       </div>
     </>

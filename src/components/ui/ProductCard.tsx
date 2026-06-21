@@ -56,7 +56,7 @@ export default function ProductCard({ product, delay = 0 }: ProductCardProps) {
           >
             Ver plataforma
           </Link>
-          <button className="btn btn-outline btn-sm">Solicitar demo</button>
+          <Link href="?modal=demo" scroll={false} className="btn btn-outline btn-sm">Solicitar demo</Link>
         </div>
       </div>
     </div>

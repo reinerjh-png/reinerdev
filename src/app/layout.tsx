@@ -5,6 +5,8 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import BackToTop from "@/components/ui/BackToTop";
 import ScrollObserver from "@/components/ui/ScrollObserver";
+import WhatsAppFloat from "@/components/ui/WhatsAppFloat";
+import DemoModal from "@/components/ui/DemoModal";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -39,7 +41,9 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <BackToTop />
+        <WhatsAppFloat />
         <ScrollObserver />
+        <DemoModal />
       </body>
     </html>
   );

@@ -1988,14 +1988,11 @@ select.form-control option { background: #0a1628; color: white; }
   margin: 0;
 }
 
-/* ---- PAGE PRODUCT (individual pages) ---- */
 .product-hero {
   min-height: 60vh;
-  display: flex;
-  align-items: center;
   position: relative;
   overflow: hidden;
-  padding: 120px 0 80px;
+  padding: 130px 0 80px;
 }
 
 .product-hero-bg {

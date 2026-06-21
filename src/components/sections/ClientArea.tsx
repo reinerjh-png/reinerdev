@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function ClientArea() {
   return (
     <section className="section-py client-area" id="clientes" aria-labelledby="client-title">
@@ -43,12 +45,12 @@ export default function ClientArea() {
           <p style={{ color: 'var(--color-gray-400)', marginBottom: '28px', fontSize: '15px' }}>
             Accede a tu portal personalizado para gestionar tu sistema, soporte y facturación.
           </p>
-          <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="#" className="btn btn-primary">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <div className="flex gap-3 justify-center flex-wrap">
+            <Link href="https://app.reinerdev.com" target="_blank" rel="noopener noreferrer" className="btn btn-primary" id="btn-client-login">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
               Acceder al portal
-            </a>
-            <button className="btn btn-secondary">Convertirme en cliente</button>
+            </Link>
+            <Link href="?modal=demo" scroll={false} className="btn btn-secondary" id="btn-become-client">Convertirme en cliente</Link>
           </div>
         </div>
       </div>

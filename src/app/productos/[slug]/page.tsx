@@ -34,7 +34,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   
   return (
     <>
-      <section className="product-page-hero relative overflow-hidden pt-[140px] pb-[80px] lg:min-h-[80vh] lg:flex lg:items-center lg:pt-[120px]" id="inicio">
+      <section className="product-hero" id="inicio">
         <div className="hero-grid absolute inset-0"></div>
         <div 
           className="hero-orb hero-orb-1" 
@@ -45,7 +45,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         <div className="container relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[80px] items-center">
             <div>
-              <div className="flex items-center gap-2 text-[13px] text-slate-500 mb-6">
+              <div className="flex flex-wrap items-center gap-2 text-[13px] text-slate-500 mb-10 pb-2" style={{ marginBottom: '40px' }}>
                 <Link href="/" className="hover:text-[var(--color-blue-bright)] transition-colors">ReinerDev</Link>
                 <span>›</span>
                 <Link href="/#productos" className="hover:text-[var(--color-blue-bright)] transition-colors">Productos</Link>
@@ -70,13 +70,14 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
               </p>
               
               <div className="flex flex-wrap gap-4 mt-8">
-                <button 
-                  className="btn btn-primary btn-lg" 
+                <Link 
+                  href="?modal=demo" scroll={false}
+                  className="btn btn-primary btn-lg hover:-translate-y-1 hover:brightness-110 transition-all duration-300" 
                   style={{ background: product.themeColor, boxShadow: `0 4px 20px ${product.themeColor}50` }}
                 >
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                   Solicitar demo gratuita
-                </button>
+                </Link>
                 <Link href="/#cotizacion" className="btn btn-secondary btn-lg">Solicitar acceso</Link>
               </div>
             </div>
@@ -165,12 +166,13 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             <h2>Comienza a usar {product.name}</h2>
             <p>Demo sin compromiso. Te mostramos el sistema adaptado a tu negocio.</p>
             <div className="cta-banner-actions">
-              <button 
-                className="btn btn-lg text-white" 
+              <Link 
+                href="?modal=demo" scroll={false}
+                className="btn btn-lg text-white hover:-translate-y-1 hover:brightness-110 transition-all duration-300" 
                 style={{ background: product.themeColor, boxShadow: `0 4px 20px ${product.themeColor}66` }}
               >
                 Solicitar demo gratuita
-              </button>
+              </Link>
             </div>
           </div>
         </div>
