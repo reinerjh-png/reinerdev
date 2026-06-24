@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { products } from '@/data/products';
 import Link from 'next/link';
 import { Metadata } from 'next';
+import ProductPricing from '@/components/sections/ProductPricing';
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const resolvedParams = await params;
@@ -136,6 +137,10 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           </div>
         </div>
       </section>
+
+      <div className="section-divider"></div>
+
+      <ProductPricing product={product} />
 
       <div className="section-divider"></div>
 

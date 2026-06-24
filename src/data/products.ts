@@ -31,6 +31,23 @@ export const products: Product[] = [
         { id: 'r3', avatarColor: 'linear-gradient(135deg, #34d399, #10b981)', statusText: 'Pendiente',  statusBg: 'rgba(251,191,36,0.15)', statusColor: '#fbbf24' },
       ],
     },
+    pricing: {
+      type: 'one-time',
+      badgeLabel: 'Compra única',
+      regularPrice: 'S/. 2,500',
+      discountPrice: 'S/. 1,800',
+      discountPercent: '-28%',
+      mockupUrl: 'dental.reinerdev.com/agenda',
+      includes: [
+        'Código fuente completo del sistema',
+        'Instalación en tu servidor (gratuita)',
+        'Configuración inicial de base de datos',
+        '30 días de soporte post-entrega',
+        'Sin pagos mensuales, el sistema es tuyo',
+      ],
+      priceNote: 'Precio de lanzamiento — incluye instalación y configuración sin costo adicional',
+      previewImage: null, // cambiar a '/images/products/dental-preview.png' cuando esté lista
+    },
   },
   {
     id: 'restaurant',
@@ -61,6 +78,25 @@ export const products: Product[] = [
         { id: 'r2', avatarColor: '#f97316', statusText: 'Preparando', statusBg: 'rgba(249,115,22,0.15)', statusColor: '#fb923c' },
         { id: 'r3', avatarColor: '#3b82f6', statusText: 'Libre',      statusBg: 'rgba(59,130,246,0.15)', statusColor: '#60a5fa' },
       ],
+    },
+    pricing: {
+      type: 'saas',
+      badgeLabel: 'SaaS mensual',
+      regularPrice: 'S/. 139',
+      discountPrice: 'S/. 99',
+      priceUnit: '/ mes',
+      discountPercent: '-28%',
+      platformUrl: 'resto.reinerdev.com',
+      mockupUrl: 'resto.reinerdev.com/mesas',
+      includes: [
+        'Acceso completo a la plataforma en la nube',
+        'Módulo de comandas, mesas y cocina',
+        'Facturación y reportes de ventas',
+        'Soporte básico y actualizaciones',
+        'Aprobación de cuenta en 48h',
+      ],
+      priceNote: 'Precio de lanzamiento — puede subir cuando se llene el cupo de acceso anticipado',
+      previewImage: null, // cambiar a '/images/products/restaurant-preview.png' cuando esté lista
     },
   },
   {
@@ -93,6 +129,26 @@ export const products: Product[] = [
         { id: 'r3', avatarColor: '#06b6d4', statusText: 'Activo',  statusBg: 'rgba(34,197,94,0.15)',  statusColor: '#4ade80' },
       ],
     },
+    pricing: {
+      type: 'saas',
+      badgeLabel: 'SaaS mensual',
+      isMostPopular: true,
+      regularPrice: 'S/. 119',
+      discountPrice: 'S/. 79',
+      priceUnit: '/ mes',
+      discountPercent: '-35%',
+      platformUrl: 'gym.reinerdev.com',
+      mockupUrl: 'gym.reinerdev.com/dashboard',
+      includes: [
+        'Acceso completo a la plataforma en la nube',
+        'Control de membresías, acceso por DNI, PIN o QR',
+        'Panel de asistencia y reportes',
+        'Soporte básico y actualizaciones',
+        'Aprobación de cuenta en 48h',
+      ],
+      priceNote: 'Precio de lanzamiento — puede subir cuando se llene el cupo de acceso anticipado',
+      previewImage: null, // cambiar a '/images/products/gym-preview.png' cuando esté lista
+    },
   },
   {
     id: 'pharmacy',
@@ -123,6 +179,25 @@ export const products: Product[] = [
         { id: 'r2', avatarColor: '#ec4899', statusText: 'Stock bajo', statusBg: 'rgba(239,68,68,0.15)',  statusColor: '#f87171' },
         { id: 'r3', avatarColor: '#8b5cf6', statusText: 'Disponible', statusBg: 'rgba(34,197,94,0.15)',  statusColor: '#4ade80' },
       ],
+    },
+    pricing: {
+      type: 'saas',
+      badgeLabel: 'SaaS mensual',
+      regularPrice: 'S/. 129',
+      discountPrice: 'S/. 89',
+      priceUnit: '/ mes',
+      discountPercent: '-30%',
+      platformUrl: 'pharma.reinerdev.com',
+      mockupUrl: 'pharma.reinerdev.com/inventario',
+      includes: [
+        'Acceso completo a la plataforma en la nube',
+        'Control de stock, vencimientos y recetas',
+        'Ventas, caja y reportes',
+        'Soporte básico y actualizaciones',
+        'Aprobación de cuenta en 48h',
+      ],
+      priceNote: 'Precio de lanzamiento — puede subir cuando se llene el cupo de acceso anticipado',
+      previewImage: null, // cambiar a '/images/products/pharmacy-preview.png' cuando esté lista
     },
   },
 ];

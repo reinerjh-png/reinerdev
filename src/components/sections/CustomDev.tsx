@@ -41,13 +41,45 @@ export default function CustomDev() {
                 </div>
               </div>
             ))}
+
+            {/* Tipos de proyectos cotizables */}
+            <div className="mt-6 p-4 rounded-xl border" style={{ background: 'rgba(255,255,255,0.03)', borderColor: 'rgba(255,255,255,0.08)' }}>
+              <p className="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-3">Puedo cotizarte</p>
+              <div className="flex flex-wrap gap-2">
+                {['Sistema web', 'App móvil', 'Página web', 'Automatizaciones', 'Integraciones API', 'Migraciones'].map(tag => (
+                  <span
+                    key={tag}
+                    className="px-2.5 py-1 rounded-full text-[11px] font-medium text-slate-300 border"
+                    style={{ background: 'rgba(37,99,235,0.1)', borderColor: 'rgba(37,99,235,0.25)' }}
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Tiempo de respuesta */}
+            <div className="mt-4 flex items-center gap-2.5 text-sm text-slate-400">
+              <svg className="w-4 h-4 flex-shrink-0 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+              </svg>
+              <span>Recibo tu requerimiento y te respondo en <strong className="text-white">menos de 24h</strong></span>
+            </div>
+
+            {/* Línea de confianza */}
+            <div className="mt-3 flex items-center gap-2.5 text-sm text-slate-400">
+              <svg className="w-4 h-4 flex-shrink-0 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+              <span>Más de <strong className="text-white">15 proyectos entregados</strong> a empresas en Perú</span>
+            </div>
           </div>
 
           {/* Quote form */}
           <div className="animate-fade-up animate-delay-2">
             <div className="quote-panel">
               <h3>Cotiza tu proyecto</h3>
-              <p>Cuéntanos qué necesitas y te responderemos en 24 horas.</p>
+              <p>Cuéntanos qué necesitas. <strong className="text-white">Te respondo en menos de 24 horas.</strong></p>
 
               {!isSuccess ? (
                 <form onSubmit={handleSubmit} noValidate>
@@ -110,9 +142,18 @@ export default function CustomDev() {
 
                   <button
                     type="submit"
+                    id="btn-enviar-cotizacion"
                     className="btn btn-primary"
                     disabled={isSubmitting}
-                    style={{ width: '100%', justifyContent: 'center', marginTop: '8px' }}
+                    style={{
+                      width: '100%',
+                      justifyContent: 'center',
+                      marginTop: '8px',
+                      padding: '14px 24px',
+                      fontSize: '15px',
+                      fontWeight: 700,
+                      boxShadow: '0 4px 24px rgba(37,99,235,0.45)',
+                    }}
                   >
                     {isSubmitting ? (
                       'Enviando...'
